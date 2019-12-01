@@ -1,0 +1,111 @@
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+.loading{
+    padding: 20px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.wrap{}
+
+.wrap .user{
+    width: 450px;
+    margin: 150px auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 5px 50px 0 #ccc;
+    background: #fff;
+}
+.wrap .user .picture{
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+.wrap .user .picture img{
+    border-radius: 50%;
+    display: inline-block;
+}
+.wrap .user .user_data{
+    margin: 15px 0;
+}
+
+.wrap .user .user_data .username,
+.wrap .user .user_data .email{
+    text-align: center;
+}
+
+.wrap .user .user_data .username{
+    font-weight: 500;
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #333;
+}
+.wrap .user .user_data .email{
+    font-weight: 400;
+    color: #999;
+}
+
+.wrap.loading{}
+
+.wrap.loading .user .picture{}
+.wrap.loading .user .user_data .username{}
+.wrap.loading .user .user_data .email{}
+
+.wrap.loading .user .picture,
+.wrap.loading .user .user_data .username,
+.wrap.loading .user .user_data .email{
+    position: relative;
+}
+
+.wrap.loading .user .picture{
+    height: 148px;
+}
+.wrap.loading .user .picture::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 128px;
+    height: 128px;
+    background: #ddd;
+    border-radius: 50%;
+    transform: translate(-50%, 0);
+}
+
+.wrap.loading .user .user_data .username{
+    height: 24px;
+}
+.wrap.loading .user .user_data .email{
+    height: 19px;
+}
+
+.wrap.loading .user .user_data .username::after,
+.wrap.loading .user .user_data .email::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background: #eae9e9;
+    border-radius: 4px;
+}
+
+.wrap.loading .user .user_data .username::after{
+
+    width: 80%;
+    height: 20px;
+}
+.wrap.loading .user .user_data .email::after{
+    width: 70%;
+    height: 15px;
+}
