@@ -4,6 +4,8 @@ The componentDidMount component shows you how to update the local component stat
 
 [https://randomuser.me/api/](https://randomuser.me/api/)
 
+Demo: https://dev.console.cf/ajax-request/
+
 **componentDidMount**
 
 ```javascript
